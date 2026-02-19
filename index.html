@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajaya ❤️ Lipika | 25th Anniversary</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background: linear-gradient(135deg, #ff4e8a, #ff1e56, #ff6f91);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .card-container {
+        perspective: 1000px;
+      }
+
+      .card {
+        width: 350px;
+        height: 500px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        cursor: pointer;
+      }
+
+      .card.open {
+        transform: rotateY(180deg);
+      }
+
+      .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .front {
+        background: linear-gradient(145deg, #ffffff, #ffe6f0);
+      }
+
+      .front h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        color: #ff1e56;
+      }
+
+      .front p {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #444;
+      }
+
+      .back {
+        background: white;
+        transform: rotateY(180deg);
+        flex-direction: column;
+      }
+
+      .back img {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .back h2 {
+        font-family: "Playfair Display", serif;
+        color: #ff1e56;
+        margin-bottom: 10px;
+      }
+
+      .back p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 13px;
+        color: #ff1e56;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card-container">
+      <div class="card" onclick="openCard()">
+        <!-- Front Side -->
+        <div class="card-face front">
+          <div>
+            <h1>Silver Jubilee ❤️</h1>
+            <p>Ajaya 💕 Lipika</p>
+            <p>25 Years of Togetherness</p>
+            <br />
+            <p>Click to Open</p>
+          </div>
+        </div>
+
+        <!-- Back Side -->
+        <div class="card-face back">
+          <!-- Replace image.jpg with your parents photo -->
+          <img
+            src="./ChatGPT Image Feb 19, 2026, 10_53_15 PM.png"
+            alt="Ajaya & Lipika"
+          />
+
+          <h2>Happy 25th Anniversary</h2>
+
+          <p>
+            Celebrating 25 beautiful years of love, trust, and endless memories.
+            Your journey together is a true inspiration of partnership and
+            devotion. May your bond grow stronger with every passing year.
+          </p>
+
+          <div class="footer">With Love ❤️ Ajaya & Lipika</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openCard() {
+        document.querySelector(".card").classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
